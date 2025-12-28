@@ -1,0 +1,431 @@
+{
+	"connections": [
+		{
+			"from": "buffer",
+			"from_port": 0,
+			"to": "export",
+			"to_port": 0
+		},
+		{
+			"from": "uniform",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 0
+		},
+		{
+			"from": "fbm3",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 1
+		},
+		{
+			"from": "uniform_2",
+			"from_port": 0,
+			"to": "blend2_2",
+			"to_port": 0
+		},
+		{
+			"from": "fbm3_2",
+			"from_port": 0,
+			"to": "blend2_2",
+			"to_port": 1
+		},
+		{
+			"from": "blend2_2",
+			"from_port": 0,
+			"to": "blend2_3",
+			"to_port": 0
+		},
+		{
+			"from": "blend2",
+			"from_port": 0,
+			"to": "blend2_3",
+			"to_port": 1
+		},
+		{
+			"from": "adjust_hsv",
+			"from_port": 0,
+			"to": "buffer",
+			"to_port": 0
+		},
+		{
+			"from": "gaussian_blur",
+			"from_port": 0,
+			"to": "adjust_hsv",
+			"to_port": 0
+		},
+		{
+			"from": "buffer",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 4
+		},
+		{
+			"from": "randomize",
+			"from_port": 0,
+			"to": "fbm3_2",
+			"to_port": 0
+		},
+		{
+			"from": "randomize_2",
+			"from_port": 0,
+			"to": "fbm3",
+			"to_port": 0
+		},
+		{
+			"from": "uniform_3",
+			"from_port": 0,
+			"to": "blend2_4",
+			"to_port": 0
+		},
+		{
+			"from": "fbm3_3",
+			"from_port": 0,
+			"to": "blend2_4",
+			"to_port": 1
+		},
+		{
+			"from": "randomize_3",
+			"from_port": 0,
+			"to": "fbm3_3",
+			"to_port": 0
+		},
+		{
+			"from": "blend2_5",
+			"from_port": 0,
+			"to": "gaussian_blur",
+			"to_port": 0
+		},
+		{
+			"from": "blend2_3",
+			"from_port": 0,
+			"to": "blend2_5",
+			"to_port": 0
+		},
+		{
+			"from": "blend2_4",
+			"from_port": 0,
+			"to": "blend2_5",
+			"to_port": 1
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "@Node@3474",
+	"node_position": {
+		"x": 0.0,
+		"y": 0.0
+	},
+	"nodes": [
+		{
+			"export_last_target": "Blender",
+			"export_paths": {
+				"Blender": "/home/bazzite/Desktop/TentFloor",
+				"Unreal/Unreal Engine 5": "/var/home/bazzite/.local/share/Steam/steamapps/common/RimWorld/Mods/Amor-tentaculum/Textures/Things/Buildings/Floor/TentFloor_New"
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 843.643249511719,
+				"y": 119.636505126953
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1.0,
+					"b": 1.0,
+					"g": 1.0,
+					"r": 1.0,
+					"type": "Color"
+				},
+				"ao": 1.0,
+				"depth_scale": 0.5,
+				"emission_energy": 1.0,
+				"flags_transparent": true,
+				"metallic": 0.0,
+				"normal": 1.0,
+				"roughness": 1.0,
+				"size": 11,
+				"sss": 1.0
+			},
+			"seed_int": 0,
+			"type": "material"
+		},
+		{
+			"name": "fbm3",
+			"node_position": {
+				"x": -559.699951171875,
+				"y": 302.5
+			},
+			"parameters": {
+				"folds": 2.0,
+				"iterations": 10.0,
+				"noise": 1,
+				"offset": 0.7,
+				"persistence": 0.44,
+				"scale_x": 16.0,
+				"scale_y": 16.0
+			},
+			"seed_int": 0,
+			"type": "fbm3"
+		},
+		{
+			"name": "buffer",
+			"node_position": {
+				"x": 551.189697265625,
+				"y": 187.016647338867
+			},
+			"parameters": {
+				"f32": true,
+				"filter": true,
+				"mipmap": true,
+				"size": 10
+			},
+			"seed_int": 0,
+			"type": "buffer",
+			"version": 2
+		},
+		{
+			"name": "export",
+			"node_position": {
+				"x": 857.467224121094,
+				"y": 536.965576171875
+			},
+			"parameters": {
+				"size": 10.0,
+				"suffix": "FloorTile"
+			},
+			"seed_int": 0,
+			"type": "export"
+		},
+		{
+			"name": "uniform",
+			"node_position": {
+				"x": -497.0,
+				"y": 220.000015258789
+			},
+			"parameters": {
+				"color": {
+					"a": 1.0,
+					"b": 0.762575685977936,
+					"g": 0.419113159179688,
+					"r": 0.88671875,
+					"type": "Color"
+				}
+			},
+			"seed_int": 0,
+			"type": "uniform"
+		},
+		{
+			"generic_size": 1,
+			"name": "blend2",
+			"node_position": {
+				"x": -339.700012207031,
+				"y": 247.500015258789
+			},
+			"parameters": {
+				"amount1": 1.0,
+				"blend_type1": 2
+			},
+			"seed_int": 0,
+			"type": "blend2"
+		},
+		{
+			"name": "fbm3_2",
+			"node_position": {
+				"x": -550.766662597656,
+				"y": 1.8000214099884
+			},
+			"parameters": {
+				"folds": 2.0,
+				"iterations": 4.0,
+				"noise": 1.0,
+				"offset": 0.33,
+				"persistence": 0.44,
+				"scale_x": 24.0,
+				"scale_y": 24.0
+			},
+			"seed_int": 0,
+			"type": "fbm3"
+		},
+		{
+			"name": "uniform_2",
+			"node_position": {
+				"x": -489.166717529297,
+				"y": -79.599983215332
+			},
+			"parameters": {
+				"color": {
+					"a": 1.0,
+					"b": 0.596078455448151,
+					"g": 0.270588248968124,
+					"r": 0.713725507259369,
+					"type": "Color"
+				}
+			},
+			"seed_int": 0,
+			"type": "uniform"
+		},
+		{
+			"generic_size": 1,
+			"name": "blend2_2",
+			"node_position": {
+				"x": -318.666748046875,
+				"y": -57.5999794006348
+			},
+			"parameters": {
+				"amount1": 1.0,
+				"blend_type1": 2.0
+			},
+			"seed_int": 0,
+			"type": "blend2"
+		},
+		{
+			"generic_size": 1,
+			"name": "blend2_3",
+			"node_position": {
+				"x": -70.3999938964844,
+				"y": 83.1999893188477
+			},
+			"parameters": {
+				"amount1": 0.65,
+				"blend_type1": 2
+			},
+			"seed_int": 0,
+			"type": "blend2"
+		},
+		{
+			"name": "adjust_hsv",
+			"node_position": {
+				"x": 253.479156494141,
+				"y": 614.549621582031
+			},
+			"parameters": {
+				"hue": -0.05,
+				"saturation": 1.2,
+				"value": 1.5
+			},
+			"seed_int": 0,
+			"type": "adjust_hsv"
+		},
+		{
+			"name": "gaussian_blur",
+			"node_position": {
+				"x": 242.137542724609,
+				"y": 425.284851074219
+			},
+			"parameters": {
+				"param0": 12,
+				"param1": 2.0,
+				"param2": 0.0,
+				"param3": true
+			},
+			"seed_int": 0,
+			"type": "gaussian_blur"
+		},
+		{
+			"name": "randomize",
+			"node_position": {
+				"x": -744.997375488281,
+				"y": 138.659759521484
+			},
+			"parameters": {
+
+			},
+			"seed_int": 0,
+			"type": "randomize"
+		},
+		{
+			"name": "randomize_2",
+			"node_position": {
+				"x": -757.257080078125,
+				"y": 438.909790039062
+			},
+			"parameters": {
+
+			},
+			"seed_int": 0,
+			"type": "randomize"
+		},
+		{
+			"name": "fbm3_3",
+			"node_position": {
+				"x": -557.895874023438,
+				"y": 618.706848144531
+			},
+			"parameters": {
+				"folds": 2.0,
+				"iterations": 4.0,
+				"noise": 1.0,
+				"offset": 0.33,
+				"persistence": 0.44,
+				"scale_x": 32.0,
+				"scale_y": 32.0
+			},
+			"seed_int": 0,
+			"type": "fbm3"
+		},
+		{
+			"generic_size": 1,
+			"name": "blend2_4",
+			"node_position": {
+				"x": -325.795989990234,
+				"y": 559.306823730469
+			},
+			"parameters": {
+				"amount1": 1.0,
+				"blend_type1": 2.0
+			},
+			"seed_int": 0,
+			"type": "blend2"
+		},
+		{
+			"name": "uniform_3",
+			"node_position": {
+				"x": -496.295989990234,
+				"y": 537.306823730469
+			},
+			"parameters": {
+				"color": {
+					"a": 1.0,
+					"b": 0.474843800067902,
+					"g": 0.15667724609375,
+					"r": 0.58984375,
+					"type": "Color"
+				}
+			},
+			"seed_int": 0,
+			"type": "uniform"
+		},
+		{
+			"name": "randomize_3",
+			"node_position": {
+				"x": -752.126647949219,
+				"y": 755.566589355469
+			},
+			"parameters": {
+
+			},
+			"seed_int": 0,
+			"type": "randomize"
+		},
+		{
+			"generic_size": 1,
+			"name": "blend2_5",
+			"node_position": {
+				"x": 233.092407226562,
+				"y": 233.893798828125
+			},
+			"parameters": {
+				"amount1": 1.0,
+				"blend_type1": 21
+			},
+			"seed_int": 0,
+			"type": "blend2"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed_int": 0,
+	"shortdesc": "",
+	"type": "graph"
+}

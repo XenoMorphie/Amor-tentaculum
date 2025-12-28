@@ -1,12 +1,27 @@
 <ModMetaData>
 	<name>Amor Tentaculum</name>
-<description>Adds Tentacle creatures, parasite pregnancy. Endovore stuff idk.</description>
+	<description>Adds Tentacle creatures, parasite pregnancy. Endovore stuff idk. You must disable the Egg Implant Filter in RJW settings.</description>
 	<author>Castle</author>
 	<supportedVersions>
 		<li>1.5</li>
 		<li>1.6</li>
 	</supportedVersions>
-<modDependencies>
+	<modDependencies>
+		<li>
+			<packageId>Ludeon.RimWorld.Biotech</packageId>
+			<displayName>Biotech</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2876110625</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>Ludeon.RimWorld.Anomaly</packageId>
+			<displayName>Anomaly</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/321850148</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>Ludeon.RimWorld.Ideology</packageId>
+			<displayName>Ideology</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2550062402</steamWorkshopUrl>
+		</li>
 		<li>
 			<packageId>brrainz.harmony</packageId>
 			<displayName>Harmony</displayName>
@@ -41,6 +56,7 @@
 		<li>Ludeon.RimWorld.Royalty</li>
 		<li>Ludeon.RimWorld.Ideology</li>
 		<li>Ludeon.RimWorld.Biotech</li>
+		<li>Ludeon.RimWorld.Anomaly</li>
 		<li>brrainz.harmony</li>
 		<li>rim.job.world</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>

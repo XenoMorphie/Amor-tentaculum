@@ -1,4 +1,21 @@
+## Unmaintained Fork Notice
+
+I offer no long-term maintainership commitment. This branch just moves things by a hair.
+
+This contains collective edits by IcePokeDude (upstream), XenoMorphie, and Zsar (adapted).
+
+#### Changes
+
+For the base changes, see the following PRs:
+ - https://github.com/MrCastle69/Amor-tentaculum/pull/9
+ - https://github.com/IcePokeDude/Amor-tentaculum/pull/1
+ - https://github.com/IcePokeDude/Amor-tentaculum/pull/2
+ - https://github.com/IcePokeDude/Amor-tentaculum/pull/3
+
+
 # Amor-tentaculum
+
+
 Rimworld Tentacle Mod
 
 Requires:
